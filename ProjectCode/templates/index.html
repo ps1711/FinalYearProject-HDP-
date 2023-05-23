@@ -1,0 +1,293 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ultra&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="static\css\styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <style>
+
+        body { 
+            width: 100%;
+            height:auto;
+            font-family: 'Open Sans', sans-serif;
+            color:#fff;
+            font-size: 18px;
+            text-align:center;
+            letter-spacing:1.2px;
+            background-image: url("../static/about.jpg");
+            background-size: cover;	
+        }
+        #form-div{
+                border-width: 0.2rem !important;
+                border-radius: 2% !important;
+                box-shadow: rgb(187, 183, 183) 3px 7px !important; 
+                /* background-image: url("../static/heart.jpeg");
+                background-size: cover;	 */
+                background:rgba(100, 148, 237, 0.685);
+        
+            }
+        #form-div:hover{
+            box-shadow: rgb(104, 104, 104) 5px 10px !important;
+        }
+        input,select{
+                outline: none !important;
+                border: none !important;
+                border-bottom:green 2px solid !important;
+            }
+        input:focus,input:active{
+                outline: none !important;
+                border: none !important;
+            }
+        input::placeholder,select::placeholder{ 
+          color: black !important;
+          opacity: 1;
+        }
+        h1{
+            color:red !important;
+            }
+        footer{
+            background: teal !important;
+            color: rgb(253, 253, 253) !important;
+            font-weight: bold !important;
+            text-align: center !important;
+            }
+        nav{
+            background: teal !important;
+            box-shadow: rgba(164, 164, 165, 0.582) 2px 8px;
+            color: white;
+            }
+        p{
+            border-bottom: 2px solid orangered;
+            }
+        .navbar-brand{
+                font-family: 'Berkshire Swash', cursive;
+            }
+        .form-group{
+                border: none !important;
+                outline: none !important;
+            }
+        .form-control:focus,select:focus,select:active{
+                box-shadow: gray 1px 3px !important;
+            }
+        select option { color: black; }
+        select option:first-child{
+          color: black;
+        }
+        #mobileview{
+            display: none;
+        }
+        #counter{
+            position: absolute;
+            right: 2%;
+            top: 11%;
+            z-index: 9999;
+            height: 50px;
+            min-width: 50px;
+            background-color: rgba(0, 128, 128, 0.397);
+            color: red;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            font-size: large;
+        
+        }
+        
+        @media (max-width:767px) {
+            #mobileview{
+            display: block !important;
+        }
+        }
+            
+        </style>
+   
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Cardio Moniter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+    <nav class=" text-center navbar navbar-expand-md mb-3">
+        <a class="navbar-brand text-white" href="{{ url_for('home') }}"><span class="r-name font-weight-bold"> <img src="static/heartlogo.png" height="40px" width="40px"/>Cardio Monitor</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link text-white font-weight-bold" href="{{ url_for('about') }}">About heart disease</a>
+          </div>
+        </div>
+      </nav>
+    <div class="container align-items-center mt-1">
+        <h4 class="text-dark my-2 p-2" id="mobileview">Click to know ☞<a class="text-info " href="{{ url_for('about') }}" >About heart disease</a></h4>
+        <div class="rounded border" id="counter"></div>
+        <div class="row">
+            <div class=" col-md-10 offset-md-1 col-xs-12 border p-4 mt-1" id="form-div">
+                <div class="pb-1 pt-1 mb-2 text-center">
+                    <h1 class="pb-1 mb-1 h3 font-weight-bold"> CARDIO MONITOR</h1>
+                    <p class="text-white pb-1">This web app helps you to find out whether you are at a risk of developing a heart disease. <br>
+                        Please fill below details to know your Heart Condition.</p>
+                    </div>
+
+    
+
+    <div class="container">
+        <form action="/predict" method="POST">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="age">Enter your age</label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <input type="text" id="age" name="age" placeholder="Your current age in years">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="Gender">Enter your Gender</label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <select id="Gender" name="Gender">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="cp">Chest pain type?</label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <select  id="cp" name="cp">
+                        <option value="0">No chest pain</option>
+                        <option value="1">Typical angina(Chest pain due to emotional or physical stress)</option>
+                        <option value="2">Atypical angina(Discomfort in chest, no severe)</option>
+                        <option value="3">Non-anginal chest pain</option>
+                        <option value="4">Asymptomatic chest pain(Select if the above are not applicable)</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="chol">Serum Cholestrol in mg/dl </label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <input type="text"  id="chol sample" name="chol sample" placeholder="Cholestrol">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="restecg_mean">Rest ECG results</label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <select  id="restecg_mean" name="restecg_mean">
+                        <option value="0">Normal</option>
+                        <option value="1">Having ST-T wave abnormality  </option>
+                        <option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="Thalch">Maximum heart rate achieved during ecg  [60-202]</label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <input type="text"  id="Thalch" name="Thalch" placeholder="Thalch">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="Exang">Chest pain during exercise?</label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <select  id="Exang" name="Exang">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="Oldpeak">Oldpeak[-2.5-6.2] </label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <input type="text"  id="Oldpeak" name="Oldpeak" placeholder="Oldpeak">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="slope">Slope[0-3] </label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <input type="text"  id="slope" name="slope" placeholder="slope">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <label for="Ca">Ca [0-4] </label>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <input type="text"  id="Ca" name="Ca" placeholder="Ca">
+                </div>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-outline-warning">Predict</button>
+        </form>
+        <br>
+        <br>
+        <h3><strong>{{ prediction_text }}</strong></h3>
+        <br>
+        <br>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
